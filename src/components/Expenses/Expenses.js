@@ -4,6 +4,7 @@ import ExpensesList from "./ExpensesList";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesChart from "./ExpensesChart";
+import ExpensesTotal from "./ExpensesTotal";
 
 const Expenses = (props) => {
   const [selectedYear, setSelectedYear] = useState("2020");
@@ -11,8 +12,6 @@ const Expenses = (props) => {
   const filteredExpenses = props.items.filter((expense) => {
     return expense.date.getUTCFullYear().toString() === selectedYear;
   });
-
-  const total = filteredExpenses.reduce((accumulator, currentValue) => { return accumulator + currentValue.amount }, 0);
 
   return (
     <div>
@@ -22,12 +21,7 @@ const Expenses = (props) => {
           onSelectYear={setSelectedYear}
         />
         <ExpensesChart expenses={filteredExpenses} />
-
-        <Card className="total-amount">
-          <h2>Total Amount</h2>
-          <div className="total-amount__total">${total}</div>
-        </Card>
-
+        <ExpensesTotal items={filteredExpenses} />
         <ExpensesList items={filteredExpenses} />
       </Card>
     </div>
