@@ -15,7 +15,7 @@ Everything included in the first commit is from the original project. All later 
 
 ## Check it in action
 
-You can check this project at
+You can check this project at Netlify [here](https://expenses-bc-nogueira.netlify.app/).
 
 Or you can run it in your local machine:
 
