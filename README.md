@@ -13,6 +13,7 @@ Everything included in the first commit is from the original project. All later 
 - Show total amount per year :heavy_check_mark:
 - Summary page showing total expenses by year with extra detailed information by month :heavy_check_mark:
 - Format amount string :heavy_check_mark:
+- Change selected year after adding or updating an expense :heavy_check_mark:
 - [WIP] Improve responsive layout
 
 ## Check it in action

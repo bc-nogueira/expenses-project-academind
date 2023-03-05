@@ -29,17 +29,20 @@ const DUMMY_EXPENSES = [
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
   const [displaySummary, setDisplaySummary] = useState(false);
+  const [selectedYear, setSelectedYear] = useState("2020");
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
+    setSelectedYear(expense.date.getFullYear().toString());
   };
 
   const updateExpenseHandler = (updatedExpense) => {
     setExpenses((prevState) => {
       return prevState.map((expense) => expense.id === updatedExpense.id ? updatedExpense : expense)
     });
+    setSelectedYear(updatedExpense.date.getFullYear().toString());
   };
 
   const removeExpenseHandler = (expenseId) => {
@@ -61,6 +64,8 @@ const App = () => {
             items={expenses}
             onUpdateExpense={updateExpenseHandler}
             onDeleteExpense={removeExpenseHandler}
+            selectedYear={selectedYear}
+            onSelectYear={setSelectedYear}
           />
         </>
       )}
