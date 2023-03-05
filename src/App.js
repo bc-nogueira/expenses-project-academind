@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
-import NewExpense from "./components/NewExpense/NewExpense";
+import NewExpense from "./components/ExpenseForm/NewExpense";
 
 const DUMMY_EXPENSES = [
   {
@@ -33,6 +33,12 @@ const App = () => {
     });
   };
 
+  const updateExpenseHandler = (updatedExpense) => {
+    setExpenses((prevState) => {
+      return prevState.map((expense) => expense.id === updatedExpense.id ? updatedExpense : expense)
+    });
+  };
+
   const removeExpenseHandler = (expenseId) => {
     setExpenses((prevState) => {
       return prevState.filter((expense) => expense.id !== expenseId)
@@ -42,7 +48,11 @@ const App = () => {
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} onDeleteExpense={removeExpenseHandler} />
+      <Expenses
+        items={expenses}
+        onUpdateExpense={updateExpenseHandler}
+        onDeleteExpense={removeExpenseHandler}
+      />
     </div>
   );
 };

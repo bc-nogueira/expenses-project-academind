@@ -18,13 +18,19 @@ const NewExpense = (props) => {
   return (
     <div className="new-expense">
       {!displayForm && (
-        <button onClick={() => setDisplayForm(true)}>Add New Expense</button>
+        <button
+          className="form-button"
+          onClick={() => setDisplayForm(true)}
+        >
+          Add New Expense
+        </button>
       )}
 
       {displayForm && (
         <ExpenseForm
           onClickCancel={setDisplayForm}
           onSaveExpenseData={saveExpenseDataHandler}
+          submitBtnText={"Add Expense"}
         />
       )}
     </div>

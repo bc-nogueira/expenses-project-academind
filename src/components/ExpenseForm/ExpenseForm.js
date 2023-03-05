@@ -2,9 +2,10 @@ import { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = (props) => {
-  const [enteredTitle, setEnteredTitle] = useState("");
-  const [enteredAmount, setEnteredAmount] = useState("");
-  const [enteredDate, setEnteredDate] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState(props.title || "");
+  const [enteredAmount, setEnteredAmount] = useState(props.amount || "");
+  const [enteredDate, setEnteredDate] = useState(props.date !== undefined ? props.date.toISOString().split('T')[0] : "");
+  // const [enteredDate, setEnteredDate] = useState("2022-01-05");
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: "",
   //   enteredAmount: "",
@@ -80,10 +81,16 @@ const ExpenseForm = (props) => {
       </div>
 
       <div className="new-expense__actions">
-        <button type="button" onClick={() => props.onClickCancel(false)}>
+        <button
+          type="button"
+          className="form-button"
+          onClick={() => props.onClickCancel(false)}
+        >
           Cancel
         </button>
-        <button type="submit">Add Expense</button>
+        <button className="form-button" type="submit">
+          {props.submitBtnText}
+        </button>
       </div>
     </form>
   );

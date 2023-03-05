@@ -1,37 +1,56 @@
+import { useState } from "react";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
+import ExpenseForm from "../ExpenseForm/ExpenseForm";
+import ExpenseActions from "./ExpenseActions";
 import "./ExpenseItem.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTrash } from "@fortawesome/free-solid-svg-icons"
-
 const ExpenseItem = (props) => {
+  const [displayEditForm, setDisplayEditForm] = useState(false);
+
   const handleDeleteClick = () => {
     props.onDeleteExpense(props.expenseId);
-  }
+  };
+
+  const updateExpenseDataHandler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: props.expenseId,
+    };
+
+    props.onUpdateExpense(expenseData);
+    setDisplayEditForm(false);
+  };
 
   return (
     <li>
-      <Card className="expense-item">
-        <ExpenseDate date={props.date} />
-        <div className="expense-item__description">
-          <h2>{props.title}</h2>
-          <div>
-            <div className="expense-item__price">${props.amount}</div>
-            <div className="expense-item__actions">
-              <div className="expense-item__delete" onClick={handleDeleteClick}>
-                <FontAwesomeIcon icon={faTrash} />
-              </div>
-              <div
-                className="expense-item__delete"
-                style={{ marginLeft: "5px" }}
-                onClick={handleDeleteClick}
-              >
-                <FontAwesomeIcon icon={faTrash} />
-              </div>
+      <Card className="expense-item__card">
+        <div className="expense-item">
+          <ExpenseDate date={props.date} />
+          <div className="expense-item__description">
+            <h2>{props.title}</h2>
+            <div>
+              <div className="expense-item__price">${props.amount}</div>
+              <ExpenseActions
+                onEditClick={setDisplayEditForm}
+                onDeleteClick={handleDeleteClick}
+              />
             </div>
           </div>
         </div>
+        
+        {displayEditForm && (
+          <div className="expense-item__edit-form">
+            <ExpenseForm
+              onClickCancel={setDisplayEditForm}
+              onSaveExpenseData={updateExpenseDataHandler}
+              title={props.title}
+              amount={props.amount}
+              date={props.date}
+              submitBtnText={"Update Expense"}
+            />
+          </div>
+        )}
       </Card>
     </li>
   );

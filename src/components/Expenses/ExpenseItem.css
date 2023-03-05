@@ -2,10 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #4b4b4b;
+  flex-direction: row;
+}
+
+.expense-item__card {
   padding: 0.5rem;
   margin: 1rem 0;
   background-color: #4b4b4b;
-  flex-direction: row;
 }
 
 .expense-item__description {
@@ -36,27 +40,6 @@
   border-radius: 12px;
 }
 
-.expense-item__actions {
-  margin-top: 5px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.expense-item__delete {
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: #c70000;
-  border: 1px solid white;
-  padding: 0.5rem;
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.expense-item__delete:hover {
-  background-color: #8b0000;
-}
-
 @media (min-width: 580px) {
   .expense-item__description {
     flex-direction: row;
@@ -72,10 +55,5 @@
   .expense-item__price {
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
-  }
-
-  .expense-item__delete {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
   }
 }
