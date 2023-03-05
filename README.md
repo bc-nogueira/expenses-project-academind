@@ -8,10 +8,12 @@ I coded along during the course [React - The Complete Guide (incl Hooks, React R
 
 Everything included in the first commit is from the original project. All later commits are changes that I made to the project. These changes include:
 
-- [WIP] Delete expense
+- Delete expense :heavy_check_mark:
 - [WIP] Edit expense
-- Show total amount per year
+- Show total amount per year :heavy_check_mark:
 - [WIP] Summary page showing total expenses by year with extra detailed information by month
+- [WIP] Format amount string
+- [WIP] Improve responsive layout
 
 ## Check it in action
 

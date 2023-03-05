@@ -22,7 +22,7 @@ const Expenses = (props) => {
         />
         <ExpensesChart expenses={filteredExpenses} />
         <ExpensesTotal items={filteredExpenses} />
-        <ExpensesList items={filteredExpenses} />
+        <ExpensesList items={filteredExpenses} onDeleteExpense={props.onDeleteExpense} />
       </Card>
     </div>
   );
