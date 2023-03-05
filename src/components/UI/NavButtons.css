@@ -1,0 +1,39 @@
+.nav-buttons {
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #40005d;
+  background-color: #40005d;
+  color: white;
+  border-radius: 12px;
+  width: 48%;
+}
+
+.nav-button:hover,
+.nav-button:active {
+  background-color: #d984ff;
+}
+
+.nav-button__selected {
+  border: 1px solid #fff;
+  background-color: #7500aa;
+}
+
+.nav-button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.nav-button.alternative:hover,
+.nav-button.alternative:active {
+  background-color: #ddb3f8;
+}

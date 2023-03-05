@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = (props) => {
-  const [enteredTitle, setEnteredTitle] = useState(props.title || "");
-  const [enteredAmount, setEnteredAmount] = useState(props.amount || "");
+  const [enteredTitle, setEnteredTitle] = useState(props.title ?? "");
+  const [enteredAmount, setEnteredAmount] = useState(props.amount ?? "");
   const [enteredDate, setEnteredDate] = useState(props.date !== undefined ? props.date.toISOString().split('T')[0] : "");
   // const [enteredDate, setEnteredDate] = useState("2022-01-05");
   // const [userInput, setUserInput] = useState({

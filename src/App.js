@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/ExpenseForm/NewExpense";
+import ExpensesSummary from "./components/ExpensesSummary/ExpensesSummary";
+import NavButtons from "./components/UI/NavButtons";
 
 const DUMMY_EXPENSES = [
   {
@@ -26,6 +28,7 @@ const DUMMY_EXPENSES = [
 
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const [displaySummary, setDisplaySummary] = useState(false);
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
@@ -47,12 +50,20 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses
-        items={expenses}
-        onUpdateExpense={updateExpenseHandler}
-        onDeleteExpense={removeExpenseHandler}
-      />
+      <NavButtons displaySummary={displaySummary} onNavClick={setDisplaySummary} />
+      
+      {displaySummary && <ExpensesSummary items={expenses} />}
+
+      {!displaySummary && (
+        <>
+          <NewExpense onAddExpense={addExpenseHandler} />
+          <Expenses
+            items={expenses}
+            onUpdateExpense={updateExpenseHandler}
+            onDeleteExpense={removeExpenseHandler}
+          />
+        </>
+      )}
     </div>
   );
 };

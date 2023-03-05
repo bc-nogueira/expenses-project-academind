@@ -1,7 +1,7 @@
 import "./ExpenseActions.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTrash, faPenToSquare } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ExpenseActions = (props) => {
   return (

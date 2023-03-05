@@ -8,7 +8,7 @@ const ExpensesTotal = (props) => {
     <div>
       <Card className="expenses-total">
         <h2>Total Amount</h2>
-        <div className="expenses-total__amount">${total}</div>
+        <div className="expenses-total__amount">${total.toFixed(2)}</div>
       </Card>
     </div>
   );

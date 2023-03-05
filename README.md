@@ -1,6 +1,6 @@
 # Expenses Project
 
-This is a basic project made with React for studying purposes. It's an expenses tracker where you can add, edit and delete your expenses. You can view your expenses by year with a chart of expenses and detailed information or you can view a summary of your expenses.
+This is a basic project made with React for studying purposes. It's an expenses tracker where you can add, edit and delete your expenses. You can view your expenses by year with a chart of expenses and detailed information or you can view a summary of your expenses. The data is not persisted so it will reload every time the page is refreshed.
 
 I coded along during the course [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/#instructor-2) by Maximilian Schwarzmüller at Udemy.
 
@@ -11,7 +11,7 @@ Everything included in the first commit is from the original project. All later 
 - Delete expense :heavy_check_mark:
 - Edit expense :heavy_check_mark:
 - Show total amount per year :heavy_check_mark:
-- [WIP] Summary page showing total expenses by year with extra detailed information by month
+- Summary page showing total expenses by year with extra detailed information by month :heavy_check_mark:
 - Format amount string :heavy_check_mark:
 - [WIP] Improve responsive layout
 

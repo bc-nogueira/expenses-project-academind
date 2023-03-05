@@ -1,0 +1,54 @@
+.year-summary {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background-color: #4b4b4b;
+}
+
+.year-summary__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.year-summary__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.year-summary__label div {
+  width: 15px;
+}
+
+.year-summary h2 {
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.year-summary__amount {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #40005d;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.year-summary__month {
+  margin-top: 15px;
+}
+
+@media (min-width: 580px) {
+  .year-summary h2 {
+    font-size: 1.8rem;
+  }
+
+  .year-summary__amount {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
