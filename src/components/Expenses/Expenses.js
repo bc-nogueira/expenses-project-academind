@@ -12,6 +12,8 @@ const Expenses = (props) => {
     return expense.date.getUTCFullYear().toString() === selectedYear;
   });
 
+  const total = filteredExpenses.reduce((accumulator, currentValue) => { return accumulator + currentValue.amount }, 0);
+
   return (
     <div>
       <Card className="expenses">
@@ -20,6 +22,12 @@ const Expenses = (props) => {
           onSelectYear={setSelectedYear}
         />
         <ExpensesChart expenses={filteredExpenses} />
+
+        <Card className="total-amount">
+          <h2>Total Amount</h2>
+          <div className="total-amount__total">${total}</div>
+        </Card>
+
         <ExpensesList items={filteredExpenses} />
       </Card>
     </div>

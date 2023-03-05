@@ -10,7 +10,7 @@ Everything included in the first commit is from the original project. All later 
 
 - [WIP] Delete expense
 - [WIP] Edit expense
-- [WIP] Show total amount by year
+- Show total amount per year
 - [WIP] Summary page showing total expenses by year with extra detailed information by month
 
 ## Check it in action

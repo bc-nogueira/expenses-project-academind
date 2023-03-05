@@ -5,3 +5,41 @@
   width: 50rem;
   max-width: 95%;
 }
+
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background-color: #4b4b4b;
+  flex-direction: row;
+}
+
+.total-amount h2 {
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.total-amount__total {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #40005d;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+@media (min-width: 580px) {
+  .total-amount h2 {
+    font-size: 1.8rem;
+  }
+
+  .total-amount__total {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
