@@ -1,0 +1,24 @@
+# Expenses Project
+
+This is a basic project made with React for studying purposes. It's an expenses tracker where you can add, edit and delete your expenses. You can view your expenses by year with a chart of expenses and detailed information or you can view a summary of your expenses.
+
+I coded along during the course [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/#instructor-2) by Maximilian Schwarzmüller at Udemy.
+
+## My changes
+
+Everything included in the first commit is from the original project. All later commits are changes that I made to the project. These changes include:
+
+- [WIP] Delete expense
+- [WIP] Edit expense
+- [WIP] Show total amount by year
+- [WIP] Summary page showing total expenses by year with extra detailed information by month
+
+## Check it in action
+
+You can check this project at
+
+Or you can run it in your local machine:
+
+1.  Clone this repository and access the its directory.
+2.  Run `npm install` to install its dependencies.
+3.  Then run `npm start`.
