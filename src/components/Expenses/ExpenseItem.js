@@ -7,7 +7,7 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
   const [displayEditForm, setDisplayEditForm] = useState(false);
-
+  
   const handleDeleteClick = () => {
     props.onDeleteExpense(props.expenseId);
   };
@@ -30,7 +30,9 @@ const ExpenseItem = (props) => {
           <div className="expense-item__description">
             <h2>{props.title}</h2>
             <div>
-              <div className="expense-item__price">${props.amount}</div>
+              <div className="expense-item__price">
+                ${props.amount.toFixed(2)}
+              </div>
               <ExpenseActions
                 onEditClick={setDisplayEditForm}
                 onDeleteClick={handleDeleteClick}
