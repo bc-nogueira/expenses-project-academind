@@ -14,7 +14,6 @@ Everything included in the first commit is from the original project. All later 
 - Summary page showing total expenses by year with extra detailed information by month :heavy_check_mark: (commit [496523](https://github.com/bc-nogueira/expenses-project-academind/commit/4965237f7bebb8d6fe6a6a5775102daffe737db1))
 - Format amount string :heavy_check_mark: (commit [cf594a](https://github.com/bc-nogueira/expenses-project-academind/commit/cf594a1aa70701ee6c4f0364b81571681cd36369))
 - Change selected year after adding or updating an expense :heavy_check_mark: (commit [2001be](https://github.com/bc-nogueira/expenses-project-academind/commit/2001be3d68955fc8eeeec6ec8c6bab8c1011cf42))
-- [WIP] Improve responsive layout
 
 ## Check it in action
 
